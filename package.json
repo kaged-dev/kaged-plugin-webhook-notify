@@ -1,0 +1,29 @@
+{
+	"name": "@kaged/webhook-notify",
+	"description": "System plugin that POSTs the daemon launch URL to a webhook on auth.launchUrlReady with HTTPS enforcement and exponential backoff retry",
+	"version": "0.1.0",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kaged-dev/kaged-plugin-webhook-notify.git"
+	},
+	"type": "module",
+	"main": "src/index.ts",
+	"types": "src/index.ts",
+	"files": [
+		"src"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"test": "bun test",
+		"typecheck": "tsc --noEmit",
+		"format": "biome check --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.16",
+		"@types/bun": "^1.3.0",
+		"typescript": "^5.8.0"
+	}
+}
