@@ -1,7 +1,7 @@
 {
 	"name": "@kaged/webhook-notify",
 	"description": "System plugin that POSTs the daemon launch URL to a webhook on auth.launchUrlReady with HTTPS enforcement and exponential backoff retry",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
