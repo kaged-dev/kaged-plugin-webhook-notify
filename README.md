@@ -2,13 +2,13 @@
 
 <img src="https://kaged.dev/hero.svg" alt="kaged" width="100%" />
 
-# 影 @kaged/webhook-notify
+# 影 @kaged/plugin-webhook-notify
 
 **shadow ops for your `[doorbell]`**
 
 A [kaged](https://kaged.dev) system plugin that POSTs the daemon's launch URL to your webhook the moment it's ready — HTTPS enforced, exponential backoff, zero polling.
 
-[![npm](https://img.shields.io/npm/v/@kaged/webhook-notify?color=FFB000&label=npm&labelColor=0A0A0B)](https://www.npmjs.com/package/@kaged/webhook-notify)
+[![npm](https://img.shields.io/npm/v/@kaged/plugin-webhook-notify?color=FFB000&label=npm&labelColor=0A0A0B)](https://www.npmjs.com/package/@kaged/plugin-webhook-notify)
 [![license](https://img.shields.io/badge/license-MIT-FF2E63?labelColor=0A0A0B)](#license)
 [![plugin](https://img.shields.io/badge/plugin-system-00E0FF?labelColor=0A0A0B)](#what-it-is)
 
@@ -29,10 +29,10 @@ The kaged daemon mints a fresh launch URL on boot and on every token regeneratio
 In the daemon's `local.toml`:
 
 ```toml
-[system_plugins."@kaged/webhook-notify"]
+[system_plugins."@kaged/plugin-webhook-notify"]
 enabled = true
 
-[system_plugins."@kaged/webhook-notify".config]
+[system_plugins."@kaged/plugin-webhook-notify".config]
 webhook_url = "https://ntfy.sh/my-kaged-box"
 ```
 
@@ -58,7 +58,7 @@ bun run typecheck
 bun run format      # biome
 ```
 
-`vendor/plugin-types.ts` is a vendored copy of the kaged `@kaged/plugin-types` interfaces (the imports are type-only, so it never exists at runtime); it becomes a regular devDependency once that package is on npm.
+Type imports come from [`@kaged/plugin-types`](https://www.npmjs.com/package/@kaged/plugin-types) (devDependency — erased at runtime).
 
 ## release
 

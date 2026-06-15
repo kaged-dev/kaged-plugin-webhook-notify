@@ -17,9 +17,9 @@
 		"noUncheckedIndexedAccess": true,
 		"noImplicitOverride": true,
 		"paths": {
-			"@kaged/plugin-types": ["./vendor/plugin-types.ts"],
-			"@kaged/plugin-types/*": ["./vendor/*"]
+			"@kaged/plugin-types": ["./node_modules/@kaged/plugin-types/src/index.ts"],
+			"@kaged/plugin-types/*": ["./node_modules/@kaged/plugin-types/src/*"]
 		}
 	},
-	"include": ["src/**/*.ts", "__tests__/**/*.ts", "vendor/**/*.ts"]
+	"include": ["src/**/*.ts", "__tests__/**/*.ts"]
 }
